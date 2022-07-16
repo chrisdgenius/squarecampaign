@@ -1,0 +1,66 @@
+
+
+
+
+    
+<body class="app app-login p-0 bg-gradient-primary">    
+    <div class="container mb-5 ">
+         <div class="row">
+             <div class="col-12 col-md-11 col-lg-7 col-xl-6 mx-auto ">
+                     <div class="app-branding text-center">
+
+                            <a   class="logo-text ">SquareCampaign makes you popular...</a>
+                    
+                     </div>
+
+                         <div class="app-card p-1 shadow-sm">
+
+                            <h1 class="page-title mb-4">Login User</h1>
+                            
+
+                            <div class="mb-4">
+
+                           
+                                <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                                        <div class="form-group mb-4">
+                                            <label>Username</label>
+                                            <input type="text" class="form-control" formControlName="userName" placeholder="Enter Username" required>
+                                        </div>
+
+                                       
+                                    
+    
+                                        <div class="form-group mb-4">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                                        </div>
+                                      
+           
+                                        <div class="pt-4 text-center">
+                                            <button type="submit" class="btn app-btn-primary" id="btnLogin">Login</button>
+                                        </div>
+                                      
+                                 </form>
+                            
+
+                                <div class="p-2">
+                                    New Here? <a routerLink="/register">  Create New Account?</a>
+                                    <br/> Forgot Password?  <a href="forgot.html"> Reset Password</a>
+                                </div>
+                            </div>
+
+                             </div>
+                               
+                    
+
+            </div><!--//col-->
+        </div><!--//row-->
+    </div><!--//container-->
+
+</body>
+
+
+
+
+
+
