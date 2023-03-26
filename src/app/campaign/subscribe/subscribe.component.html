@@ -1,4 +1,4 @@
-<div class="app-wrapper">
+<div>
     <!-- FontAwesome JS-->
     <div class="view jarallax" data-jarallax='{"speed": 0.1}'
         style="background-image: 
@@ -7,8 +7,8 @@
         <!--   url(https://c1.wallpaperflare.com/preview/347/752/918/3d-model-world-earth-geography.jpg);"> -->
 
 
-        <div class="container m-12 p-1">
-            <div class="app-card app-card-stat-2  alert alert-dismissible shadow-sm mb-4">
+        <div>
+            <div class=" app-card-stat-2  alert alert-dismissible shadow-sm mb-4">
 
                 <label class="p-1 ">Campaign Name: </label>
                 <output class="p-2 ">{{campaignDetail.campaignName}}</output> <br>
@@ -21,13 +21,34 @@
 
             </div>
 
-            <div class="row">
-                <div class="col-12 col-md-11 col-lg-7 col-xl-6 mx-auto">
+           
+               
 
 
 
 
-                    <div class="app-card p-1 shadow-sm">
+                   
+
+                        <form [formGroup]="subscribeForm" (submit)="makePayment()">
+                           
+                            <div class="  text-center">
+                            <button  type="submit" target="_blank"   class="btn btn-primary  mb-1">Subscribe</button>
+                            </div>
+                            
+                           <!--   <button type="submit" target="_blank">Pay via promise</button>-->
+                            
+                        
+                            <div innerHtml="htmlContent"></div>
+                      <!--       </form>
+
+
+
+
+
+
+
+
+
                         <h1 class="page-title mb-1  text-center">Subscribe</h1>
 
 
@@ -57,19 +78,19 @@
                                 <button class="btn btn-primary  mb-1">Subscribe</button>
                             </div>
 
-                            <div class="p-2">
+               -->             <div class="p-2">
 
-                                Active campaings? <a routerLink="/campaign/view"> View</a>
+                                <a routerLink="/campaign/view"> Choose another plan</a>
 
 
                             </div>
 
                         </form>
-                    </div>
+                  
 
-                </div>
+               
 
-            </div>
+            
             <!--//col-->
         </div>
         <!--//row-->

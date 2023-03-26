@@ -1,0 +1,47 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+
+ <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+  </button>
+
+  <h2 mat-dialog-title> <img class="user-image" src="https://c.mql5.com/avatar/2021/11/6198BFC2-DE1B_big.jpg" /> Create a
+    campaign </h2>
+  <mat-dialog-content>
+
+ 
+    <div >
+      <mat-form-field class ="textarea" >
+        <mat-label> Highlight your campain</mat-label>
+
+        <textarea formControlName="name" placeholder="" matInput cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="10" cdkAutosizeMaxRows="20"></textarea>
+      </mat-form-field>
+
+    </div>
+
+    <div *ngIf="imageData">
+      <img class="post-img" [src]="imageData" [alt]="form.value.name" />
+
+    </div>
+
+
+    
+     
+  
+</mat-dialog-content>
+
+
+
+  <div mat-dialog-actions>
+  <button type="button" mat-raised-button (click)="fileInput.click()">
+    <mat-icon>add_a_photo</mat-icon>
+    <input hidden (change)="onFileSelect($event)" #fileInput type="file" id="file">
+  </button>
+  <div class="filler"></div>
+  <button type="submit" mat-raised-button class="post-button" >Post</button>
+
+
+</div>
+
+
+</form>

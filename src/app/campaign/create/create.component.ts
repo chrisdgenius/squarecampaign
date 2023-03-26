@@ -49,6 +49,7 @@ export class CreateComponent implements OnInit {
       campaignName: this.createForm.get('campaignName').value,
       campaignCoverage: this.createForm.get('campaignCoverage').value,
       campaignPrice: this.createForm.get('campaignPrice').value,
+      updatedAt: undefined
     };
     this.CampaignService.createcampaignType(newcampaignType).subscribe(
       (res) => {

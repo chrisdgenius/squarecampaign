@@ -53,6 +53,7 @@ signupForm: FormGroup;
     }
 
     const newUser: User = {
+      _id: '',
       firstName: this.signupForm.get('firstName').value,
       lastName: this.signupForm.get('lastName').value,
       email: this.signupForm.get('email').value,

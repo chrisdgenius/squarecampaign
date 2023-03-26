@@ -455,7 +455,7 @@ body {
     margin-bottom: 1rem;
   }
   .app-branding .logo-icon {
-    width: 36px;
+    width: 70%;
     height: 36px;
   }
   .app-branding .logo-text {
@@ -773,7 +773,7 @@ body {
   }
   .app-card .app-card-body .app-card-actions {
     display: inline-block;
-    width: 30px;
+    width: 50%;
     height: 30px;
     text-align: center;
     border-radius: 50%;
