@@ -15,6 +15,7 @@ export class ViewComponent implements OnInit {
     campaignName: '',
     campaignCoverage: '',
     campaignPrice: 0,
+    updatedAt: undefined
   };
 
   constructor(

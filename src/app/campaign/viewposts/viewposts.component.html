@@ -1,0 +1,81 @@
+<mat-card class="mat-elevation-z8 postarea">
+
+  <mat-card-content>
+
+   
+
+    <div class="flex-row">
+      
+    </div>
+    <div class="flex-row">
+    
+    <hr />
+  
+        
+        <img class="user-image" src="https://c.mql5.com/avatar/2021/11/6198BFC2-DE1B_big.jpg" />
+        <button mat-raised-button class=" outlook post-button" (click)="openDialog()">Post campaign</button>
+
+        
+      </div>
+      
+      <div class="flex-row">
+        
+        <div>
+          <button class=" outlook wallet-button">Wallet Balance:₦  {{walletDetail.balance}}</button>
+        </div>
+  </div>
+   
+    
+     
+
+
+  </mat-card-content>
+  
+</mat-card>
+
+
+
+<div class="postcard">
+
+  <hr />
+
+  <div>
+
+
+
+
+
+
+    <div *ngFor="let item of campaignDetail">
+
+      <mat-card class="mat-elevation-z5 postspace">
+        <mat-card-header>
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <mat-card-subtitle>{{ item.price }}</mat-card-subtitle>
+          
+          <a class="app-card-link-mask" [routerLink]="['/campaign/postpage', item.name]"></a>
+        </mat-card-header>
+        
+
+        <div [routerLink]="['/campaign/postpage', item._id]" routerLinkActive="router-link-active" >
+        <img class="img" [src]="item.imagePath" [alt]="item.name">
+        <mat-card-content class="textarea">
+          {{longText}}
+       
+        </mat-card-content>
+        
+      </div>
+   
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button routerLinkActive="active" routerLink="/campaign/view">Promote</button>
+
+
+
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+  </div>
+  
+</div>

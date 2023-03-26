@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class CampaignService {
- // private campaignTypeUrl = 'http://localhost:4000/campaignType';
-  private campaignTypeUrl = 'https://apicampaign.herokuapp.com/campaignType';
+  private campaignTypeUrl = 'http://localhost:8080/campaignType';
+ // private campaignTypeUrl = 'https://apicampaign.herokuapp.com/campaignType';
   
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
@@ -39,12 +39,6 @@ export class CampaignService {
    // return this.http.get<campaignType>(`${this.campaignTypeUrl}/${campaign.campaignName}`);
   }
 
-
-
- 
-
-
-
   updatecampaignType(_id: any, campaign: campaignType): Observable<campaignType> {
     return this.http
       .patch<campaignType>(`${this.campaignTypeUrl}/${campaign.campaignName}`, campaign)
@@ -57,10 +51,6 @@ export class CampaignService {
   deletecampaignType(_id: string): Observable<campaignType> {
     return this.http.delete<campaignType>(`${this.campaignTypeUrl}/${_id}`);
   }
-
-
-
-
 
    // Error 
    handleError(error: HttpErrorResponse) {
@@ -75,7 +65,30 @@ export class CampaignService {
     return throwError(msg);
   }
 
+  readonly url = 'http://localhost:8080/post';
   
+  createPost(name: string,price:string, image: File): Observable<any> {
+    const formData = new FormData();
+    formData.append('image', image);
+    formData.append('name', name);
+    formData.append('price', price);
+  //  return this.http.post(this.url,formData);
+    return this.http.post(`${this.url}/create`,formData);
+  }
+
+// GET ALL THE CAMPAIGN POST
+getPost(): Observable<any> {
+  return this.http.get<any>(`${this.url}/All`);
+}
+  
+// GET SINGLE THE CAMPAIGN POST
+
+
+getOne(_id): Observable<any> {
+  return this.http.get<any>(`${this.url}/single/${_id}`);
+
+  // return this.http.get<campaignType>(`${this.campaignTypeUrl}/${campaign.campaignName}`);
+ }
 }
 
 

@@ -9,9 +9,21 @@ import { ForgotComponent } from './auth/forgot/forgot.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { CampaignComponent } from './campaign/campaign.component';
-import { CampaignModule } from './campaign/campaign.module';
+//import { CampaignComponent } from './campaign/campaign.component';
+//import { CampaignModule } from './campaign/campaign.module';
 import { ProfileComponent } from './components/profile/profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import { MaterialModule } from './material/material.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FlutterwaveModule } from "flutterwave-angular-v3"
+//import { ViewpostsComponent } from './campaign/viewposts/viewposts.component';
+//import { ViewpostsComponent } from './campaign/viewposts/viewposts.component';
+
 
 
 @NgModule({
@@ -23,8 +35,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     NavbarComponent,
     DashboardComponent,
     ProfileComponent,
-    
-    //CampaignComponent
+   //  ViewpostsComponent,
+   // CampaignComponent
   ],
   imports: [
     BrowserModule,
@@ -32,10 +44,22 @@ import { ProfileComponent } from './components/profile/profile.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    CampaignModule,
+   // CampaignModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    MatCardModule,
+    FlutterwaveModule,
+    
     
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,264 +1,32 @@
 
-
-
-<!DOCTYPE html>
-<html lang="en"> 
-<head>
-    <title>ARC Admin - Bootstrap 5 Template</title>
-    
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="ARC Admin - Bootstrap 5 Admin Template">
-    <meta name="author" content="Christian Okonta">    
-    <link rel="shortcut icon" href="favicon.ico"> 
-    
-    <!-- FontAwesome JS-->
-    <script defer src="../../assets/plugins/fontawesome/js/all.min.js"></script>
-    
-    <!-- Bootstrap CSS via CDN -> enable this if you are ONLINE and want it fast--> 
-<!--	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous"> -->
-
-  <!--  <link id="theme-style" rel="stylesheet" href="../../assets/css/bootstrap.min.css">   --> 
-<!--	<link id="theme-style" rel="stylesheet" href="../../assets/css/styles.css"> --> 
-
-    
-	<link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800&display=swap" rel="stylesheet">
-
-</head> 
-
-
-
-    
-
-
-
-
-
-
-<div class="app-wrapper">
-	    
-    <div class="app-content pt-3 p-md-3 p-lg-4">
-        <div class="container-xl">
-            
-          
-            
-            <div class="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
-                <div class="inner">
-                    <div class="app-card-body p-3 p-lg-4">
-                       
-                        <h3 class="mb-3">Choose a Campaign!</h3>
-                        <div class="row gx-5 gy-3">
-                            <div class="col-12 col-lg-9">
-                                <div>Good marketing strategy is crucial for the growth and popularity of your goods, services, idealogy and concepts. Select a campaign that reaches your target audience. 
-                                .</div>
-                            </div><!--//col-->
-                        </div><!--//row-->
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div><!--//app-card-body-->
-                    
-                </div><!--//inner-->
-            </div><!--//app-card-->
-                
-
-
-
-        <!--	// THE CAMPAIGN TYPES-->
-
-                <div class="row g-4 mb-4">
-                <!--	// THE CAMPAIGN TYPE 1-->
-
-                    <div class="col-6 col-lg-3">
-                        <div class="app-card app-card-stat app-card-stat-1 shadow-sm h-100">
-                            <div class="app-card-body p-3 p-lg-4">
-                                <h4 class="stats-type mb-1">Social</h4>
-                                <div class="stats-figure">₦100,000</div>
-                                <div class="stats-meta text-success">
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-                                    </svg> 20%</div>
-                            </div><!--//app-card-body-->
-                            <a class="app-card-link-mask" routerLink="/campaign/view-social"></a>
-                        </div><!--//app-card-->
-                    </div><!--//col-->
-                
-<!--	// THE CAMPAIGN TYPE 2-->
   
-                    <div class="col-6 col-lg-3">
-                        <div class="app-card app-card-stat app-card-stat-2 shadow-sm h-100">
-                            <div class="app-card-body p-3 p-lg-4">
-                                <h4 class="stats-type mb-1">Extra-Social</h4>
-                                <div class="stats-figure">₦200,000</div>
-                                <div class="stats-meta text-success">
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
-                                    </svg> 5% </div>
-                            </div><!--//app-card-body-->
-                            <a class="app-card-link-mask" href="#"></a>
-                        </div><!--//app-card-->
-                    </div><!--//col-->
-     
-<!--	// THE CAMPAIGN TYPE 3-->
-
-                    <div class="col-6 col-lg-3">
-                        <div class="app-card app-card-stat app-card-stat-3 shadow-sm h-100">
-                            <div class="app-card-body p-3 p-lg-4">
-                                <h4 class="stats-type mb-1">Ultra</h4>
-                                <div class="stats-figure">₦250,000</div>
-                                <div class="stats-meta">
-                                    Open</div>
-                            </div><!--//app-card-body-->
-                            <a class="app-card-link-mask" href="#"></a>
-                        </div><!--//app-card-->
-                    </div><!--//col-->
-
-<!--	// THE CAMPAIGN TYPE 4-->
-                    <div class="col-6 col-lg-3">
-                        <div class="app-card app-card-stat app-card-stat-4 shadow-sm h-100">
-                            <div class="app-card-body p-3 p-lg-4">
-                                <h4 class="stats-type mb-1">Ultra-Max</h4>
-                                <div class="stats-figure">₦300,000</div>
-                                <div class="stats-meta">New</div>
-                                <div class="stats-meta">New</div>
-                                <div class="stats-meta">New</div>
-                                <div class="stats-meta">New</div>
-                                <div class="stats-meta">New</div>
-                                <div class="stats-meta">New</div>
-                            </div><!--//app-card-body-->
-                            <a class="app-card-link-mask" href="#"></a>
-                        </div><!--//app-card-->
-                    </div><!--//col-->
-           
-
-
-
-                <div class="row g-4 mb-4">
-
-
-
-            </div><!--//row-->
-            
-        </div><!--//container-fluid-->
-
-    </div><!--//app-content-->
-    
-
-
-    <!--	// THE FFOOTER-->
-
-    <footer class="app-footer">
-        <div class="container text-center py-3">
-            <!-- Footer -->
-            <footer class="text-center text-lg-start text-muted">
-                <!-- Section: Social media -->
-                <section
-                class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-                >
-                <!-- Left -->
-                <div class="me-5 d-none d-lg-block">
-                    <span>Get connected with us on social networks:</span>
-                </div>
-                <!-- Left -->
-            
-                <!-- Right -->
-                <div>
-                    <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                    <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                    <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                    <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <!-- Right -->
-                </section>
-                <!-- Section: Social media -->
-            
-                <!-- Section: Links  -->
-                <section class="">
-                <div class="container text-center text-md-start mt-5">
-                    <!-- Grid row -->
-                    <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>SquareCampaign
-                        </h6>
-                        <p>
-                        SquareCampaign is dedicated to making you popular
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-            
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                        Tutorials
-                        </h6>
-                        <p>
-                        <a href="https://www.youtube.com/playlist?list=PLp50dWW_m40XVtnF0aWp3t1oJIl2lqWe4" class="footer-link" target="_blank">MEAN Stack Project</a>
-                        </p>
-                        
-                        
-                    </div>
-                    <!-- Grid column -->
-            
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                        Interview Series
-                        </h6>
-                        <p>
-                        <a href="https://www.youtube.com/playlist?list=PLp50dWW_m40X_GTW0CXYlkojMT74i2O1i" class="footer-link" target="_blank">MongoDB Interview Questions</a>
-                        </p>
-                       
-                    </div>
-                    <!-- Grid column -->
-            
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                        Contact
-                        </h6>
-                        <p><i class="fas fa-home me-3"></i> YouTube Channel</p>
-                        <p>
-                        <i class="fas fa-envelope me-3"></i>
-                        squarepyramidlimited@gmail.com
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-                    </div>
-                    <!-- Grid row -->
-                </div>
-                </section>
-                <!-- Section: Links  -->
-            
-                <!-- Copyright -->
-                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2022 Copyright: squarepyramid limited
-                </div>
-                <!-- Copyright -->
-            </footer>
-            <!-- Footer -->
-           
-        </div>
-    </footer><!--//app-footer-->
-    
-</div><!--//app-wrapper-->  
+  
+  <div class="postcard">
+  
+    <hr />
+  
+    <div>
+      <div *ngFor="let item of campaignDetail">
+  
+        <mat-card class="mat-elevation-z5 postspace">
+          <mat-card-header>
+            <mat-card-title>{{ item.name }}</mat-card-title>
+            <mat-card-subtitle>{{ item.price }}</mat-card-subtitle>
+          </mat-card-header>
+          <img class="img" [src]="item.imagePath" [alt]="item.name">
+          <mat-card-content class="textarea">
+            {{longText}}
+         
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Buy</button>
+            <button mat-button routerLinkActive="active" routerLink="/campaign/view">Promote</button>
+  
+  
+  
+          </mat-card-actions>
+        </mat-card>
+  
+      </div>
+    </div>
+  </div>
