@@ -1,3 +1,14 @@
 
+<button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+        menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+        close
+    </mat-icon>
+</button>
 
+<button mat-button class="menu-button" routerLinkActive="active1" [routerLink]="['/campaign/viewposts', userId]">
+    <span>SquareCampaign</span>
+</button>
 <app-navbar></app-navbar>
