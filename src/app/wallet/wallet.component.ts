@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WalletService } from '../services/wallet.service';
 
-import { FormGroup,FormBuilder, FormControl } from '@angular/forms';
+import { UntypedFormGroup,UntypedFormBuilder, UntypedFormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -21,7 +21,7 @@ import {
 export class WalletComponent implements OnInit {
   userDetail = <any>{};
   customerDetails= <any>{};
-  form: FormGroup; //declare a reactive form of type FormGroup
+  form: UntypedFormGroup; //declare a reactive form of type FormGroup
   transactionDetail = <any>{};
   walletDetail: any;
   userId: string = '';
@@ -47,7 +47,7 @@ export class WalletComponent implements OnInit {
 
   constructor(
     public authService: AuthService,
-    public fb: FormBuilder,
+    public fb: UntypedFormBuilder,
     private walletService: WalletService,
     public router: Router,
     private flutterwave: Flutterwave,
@@ -89,9 +89,9 @@ export class WalletComponent implements OnInit {
  
     //initialise the variables in the reactive form.
     // the form will have name and image as FormControl
-   this.form = new FormGroup({
+   this.form = new UntypedFormGroup({
     //   name: new FormControl(''),
-      amount: new FormControl('')
+      amount: new UntypedFormControl('')
    //    email: new FormControl(''),
     });
   }

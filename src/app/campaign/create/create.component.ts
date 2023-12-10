@@ -3,8 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CampaignService } from 'src/app/services/campaign.service';
 import { campaignType } from 'src/app/model/campaign-type';
 import {
-  FormBuilder,
-  FormGroup,
+  UntypedFormBuilder,
+  UntypedFormGroup,
   FormArray,
   FormControl,
   Validators,
@@ -16,11 +16,11 @@ import {
   styleUrls: ['./create.component.css'],
 })
 export class CreateComponent implements OnInit {
-  createForm: FormGroup;
+  createForm: UntypedFormGroup;
   submitted = false;
 
   constructor(
-    public fb: FormBuilder,
+    public fb: UntypedFormBuilder,
     private CampaignService: CampaignService,
     private router: Router
   ) {}

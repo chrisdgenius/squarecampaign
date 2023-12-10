@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CampaignService } from 'src/app/services/campaign.service';
 import { campaignType } from 'src/app/model/campaign-type';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, FormControl } from '@angular/forms';
 import { AuthService } from 'src/app/auth/auth.service'; // to get the customer id
 //import flutterwave
 import {
@@ -17,7 +17,7 @@ import {
   styleUrls: ['./subscribe.component.css'],
 })
 export class SubscribeComponent implements OnInit {
-  subscribeForm: FormGroup;
+  subscribeForm: UntypedFormGroup;
   submitted = false;
   userId: string = '';
   userDetail = <any>{};
@@ -33,7 +33,7 @@ export class SubscribeComponent implements OnInit {
   };
 
   constructor(
-    public fb: FormBuilder,
+    public fb: UntypedFormBuilder,
     private activatedRouted: ActivatedRoute,
     private CampaignService: CampaignService,
     public authService: AuthService,

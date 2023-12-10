@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CampaignService } from 'src/app/services/campaign.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 //for textarea auto sizing
@@ -15,7 +15,7 @@ import { take } from 'rxjs/operators';
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
-  form: FormGroup; //declare a reactive form of type FormGroup
+  form: UntypedFormGroup; //declare a reactive form of type FormGroup
   imageData: string; // declare the image data of type string
 
   fileName: string; // variable to name the file
@@ -40,10 +40,10 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
     //initialise the variables in the reactive form.
     // the form will have name and image as FormControl
-    this.form = new FormGroup({
-      name: new FormControl(''),
-      price: new FormControl(''),
-      image: new FormControl(null),
+    this.form = new UntypedFormGroup({
+      name: new UntypedFormControl(''),
+      price: new UntypedFormControl(''),
+      image: new UntypedFormControl(null),
     });
   }
 

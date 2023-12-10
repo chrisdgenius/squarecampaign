@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, FormControl , Validators} from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, FormArray, FormControl , Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { User } from 'src/app/model/user';
@@ -13,13 +13,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-signupForm: FormGroup;
+signupForm: UntypedFormGroup;
   submitted = false;
  
  
 //roles = ['Super Admin', 'Property Manager', 'Tenant', 'User'];
   constructor(
-    public fb: FormBuilder,
+    public fb: UntypedFormBuilder,
     public router: Router,
     public authService: AuthService
   ) 
