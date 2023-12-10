@@ -52,28 +52,30 @@
 
 		<h4 class="name">SquareCampaign</h4>
 
-		<output class="balance" >UYI {{walletDetail.balance}} </output>
+		<output class="balance" >{{walletDetail.balance}} </output>
 		
 		{{userId}} 
 		<mat-divider></mat-divider>
 
 		<button mat-button class="menu-button" routerLinkActive="active" [routerLink]="['/campaign/viewposts', userId]">
 			<mat-icon>home</mat-icon>
-			<span>Campaigns</span>
+			<span>View</span>
 		</button>
 
-		<button mat-button class="menu-button">
+		<button mat-button class="menu-button" routerLinkActive="active" [routerLink]="['/campaign/create']">
 			<mat-icon>people</mat-icon>
-			<span>My campaigns</span>
+			<span>Create campaign</span>
 		</button>
+
 		<button mat-button class="menu-button" routerLinkActive="active" [routerLink]="['/wallet']">
 
 			<mat-icon>import_contacts</mat-icon>
-			<span>Wallet</span>
+			<span>Fund Wallet</span>
 		</button>
+
 		<button mat-button class="menu-button" routerLinkActive="active" routerLink="/campaign/view">
 			<mat-icon>import_contacts</mat-icon>
-			<span>view</span>
+			<span>Campaigns</span>
 		</button>
 		<mat-divider></mat-divider>
 

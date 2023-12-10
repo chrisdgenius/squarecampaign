@@ -15,8 +15,8 @@ import { walletBalance } from '../model/wallet-balance';
 })
 export class WalletService {
 
-  // private campaignTypeUrl = 'http://localhost:4000/campaignType';
-  private campaignTypeUrl = 'https://apicampaign.herokuapp.com/campaignType';
+   private campaignTypeUrl = 'http://localhost:8080/campaignType';
+  //private campaignTypeUrl = 'https://apicampaign.herokuapp.com/campaignType';
   
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
